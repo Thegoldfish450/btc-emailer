@@ -1,0 +1,16 @@
+name: Lookup Campground IDs
+
+on:
+  workflow_dispatch: {}
+
+jobs:
+  lookup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install camply
+        run: pip install camply
+
+      - name: Search Pymatuning
+        run: |
+          camply recreation-areas --search "Pymatuning" --state OH
+          echo "---CAMPGROUNDS---"
