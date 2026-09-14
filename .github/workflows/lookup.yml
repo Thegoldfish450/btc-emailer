@@ -12,5 +12,4 @@ jobs:
 
       - name: Search Pymatuning
         run: |
-          camply recreation-areas --search "Pymatuning" --state OH
-          echo "---CAMPGROUNDS---"
+          camply recreation-areas --provider OhioStateParks --search "Pymatuning"
